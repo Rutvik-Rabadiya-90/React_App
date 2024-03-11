@@ -23,7 +23,6 @@ class LoginCompare extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const { email, password } = this.state;
-        // Retrieve data from localStorage
         const storedUser = localStorage.getItem('userData');
 
         let parsedUserData = JSON.parse(storedUser)
@@ -39,13 +38,9 @@ class LoginCompare extends Component {
 
         }
         else if (email === parsedUserData.email && password === parsedUserData.password) {
-            // Successful login
-            // Perform actions like redirecting or setting user state
-            // alert('Login successful');
             this.setState({ shouldRedirect: true })
 
         } else {
-            // Invalid login
             this.setState({ errorMessage: 'Invalid email or password' });
         }
     };

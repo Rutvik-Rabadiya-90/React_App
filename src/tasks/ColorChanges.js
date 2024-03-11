@@ -4,7 +4,7 @@ class ColorChanger extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bgColor: localStorage.getItem('bgColor') || '#ffffff', // Default to white if no color is stored
+      bgColor: localStorage.getItem('bgColor') || '#ffffff', 
       selectedColor: ''
     };
   }

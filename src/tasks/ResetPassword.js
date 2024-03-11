@@ -19,26 +19,21 @@ class ResetPassword extends Component {
 
     const { oldPassword, newPassword, confirmPassword } = this.state;
 
-    // Validate if newPassword matches confirmPassword
     if (newPassword !== confirmPassword) {
       alert('New password and confirm password do not match');
       return;
     }
 
-    // Retrieve user data from local storage
     const userData = JSON.parse(localStorage.getItem('userData'));
 
-    // Check if old password matches the one stored in local storage
     if (userData && userData.password !== oldPassword) {
       alert('Old password is incorrect');
       return;
     }
 
-    // Update password in local storage
     userData.password = newPassword;
     localStorage.setItem('userData', JSON.stringify(userData));
 
-    // Reset form fields
     this.setState({
       oldPassword: '',
       newPassword: '',

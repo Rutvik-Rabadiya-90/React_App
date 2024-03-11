@@ -9,7 +9,6 @@ class CounterApp extends Component {
   }
 
   componentDidMount() {
-    // Load counter value from localStorage if available
     const savedCounter = localStorage.getItem('counter');
     if (savedCounter) {
       this.setState({ counter: parseInt(savedCounter) });
@@ -29,7 +28,6 @@ class CounterApp extends Component {
     this.setState(prevState => ({
       counter: prevState.counter - 1
     }), () => {
-      // Update localStorage after state has been updated
       localStorage.setItem('counter', this.state.counter.toString());
     });
   };
