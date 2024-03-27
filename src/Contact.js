@@ -5,7 +5,7 @@ import Footer from './Footer';
 function Contact() {
     return (
         <>
-            <Menu />
+            {/* <Menu /> */}
 
             <div id="wrapper">
                 <div id="page-bgtop"></div>

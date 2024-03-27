@@ -13,13 +13,20 @@ import ResetPassword from './tasks/ResetPassword';
 import Map from './tasks/Map';
 import TODO from './tasks/TODO';
 import DisplayPassword from './tasks/DisplayPassword';
+import Addapi from './tasks/Addapi';
+import FatchDemo from './tasks/FatchDemo';
+import MeanMenu from './tasks/MeanMenu';
+import Calculator from './tasks/Calculator';
+
 
 function App() {
   return (
     <>
+    
       <Router>
+      {/* <MeanMenu/> */}
         <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<MeanMenu/>}/>
           <Route path='/Home' element={<Home/>}/>
           <Route path='/About' element={<About/>}/>
           <Route path='/Contact' element={<Contact/>}/>
@@ -32,6 +39,9 @@ function App() {
           <Route path='/Map' element={<Map/>}/> 
           <Route path='/TODO' element={<TODO/>}/>
           <Route path='/DisplayPassword' element={<DisplayPassword/>}/>
+          <Route path='/Addapi' element={<Addapi/>}/>
+          <Route path='/FatchDemo' element={<FatchDemo/>}/>
+          <Route path='/Calculator' element={<Calculator/>}/>
         </Routes>
       </Router>
     </>

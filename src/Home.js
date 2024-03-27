@@ -1,7 +1,6 @@
 import Menu from "./Menu";
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-
 function Home() {
     return (
         <>
